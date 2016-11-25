@@ -6,7 +6,6 @@ import javax.persistence.Id;
 import org.springframework.stereotype.Component;
 
 @Entity
-@Component
 public class Blog {
 	
 	@Id
