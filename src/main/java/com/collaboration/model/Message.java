@@ -1,8 +1,16 @@
 package com.collaboration.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import org.springframework.stereotype.Component;
+
+@Entity
+@Component
 public class Message {
 
   private String message;
+  @Id
   private int id;
   
   public Message() {}

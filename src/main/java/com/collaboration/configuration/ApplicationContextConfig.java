@@ -72,11 +72,6 @@ public class ApplicationContextConfig {
 		return transactionManager;
 	}
 
-	/*@Autowired
-	@Bean(name = "userDetailsDAO")
-	public UserDAO getUserDetailsDAO(SessionFactory sessionFactory) {
-		return new UserDAOImpl(sessionFactory);
-	}*/
 
 
 

@@ -15,11 +15,11 @@ public class Forum {
 	
 	private String description;
 	
-	private long category;
+	private String category;
 	
 	
 
-	public Forum(long id, String title, String description, long category) {
+	public Forum(long id, String title, String description, String category) {
 		//super();
 		this.id = id;
 		this.title = title;
@@ -51,11 +51,11 @@ public class Forum {
 		this.description = description;
 	}
 
-	public long getCategory() {
+	public String getCategory() {
 		return category;
 	}
 
-	public void setCategory(long category) {
+	public void setCategory(String category) {
 		this.category = category;
 	}
 	

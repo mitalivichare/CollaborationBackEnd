@@ -1,12 +1,13 @@
 package com.collaboration.service;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
-import com.collaboration.model.Forum;
+import org.springframework.stereotype.Service;
 
+import com.collaboration.model.Forum;
+@Service("forumService")
 public class ForumServiceImpl implements ForumService {
 
 	private static final AtomicLong counter = new AtomicLong();

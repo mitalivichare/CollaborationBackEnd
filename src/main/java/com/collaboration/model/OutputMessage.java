@@ -2,6 +2,11 @@ package com.collaboration.model;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+
+import org.springframework.stereotype.Component;
+@Entity
+@Component
 public class OutputMessage extends Message {
 
 	private Date time;

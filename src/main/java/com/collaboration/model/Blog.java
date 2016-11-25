@@ -1,7 +1,15 @@
 package com.collaboration.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import org.springframework.stereotype.Component;
+
+@Entity
+@Component
 public class Blog {
 	
+	@Id
 	private long id;
 	
 	private String title;
