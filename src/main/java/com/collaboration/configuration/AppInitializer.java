@@ -1,5 +1,7 @@
 package com.collaboration.configuration;
 
+import javax.servlet.Filter;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
@@ -27,5 +29,11 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
 		logger.debug("Starting of the metnod getServletMappings");
 		return new String[] { "/" };
 	}
+	
+	 @Override
+	    protected Filter[] getServletFilters() {
+	        Filter [] singleton = { new CORSFilter() };
+	        return singleton;
+	    }
 
 }

@@ -54,7 +54,7 @@ public class ApplicationContextConfig {
 	@Bean(name = "sessionFactory")
 	public SessionFactory getSessionFactory(DataSource dataSource) {
 		LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
-		//sessionBuilder.addProperties(getHibernateProperties());
+		sessionBuilder.addProperties(getHibernateProperties());
 		sessionBuilder.addAnnotatedClass(User.class);
 		sessionBuilder.addAnnotatedClass(Blog.class);
 		sessionBuilder.addAnnotatedClass(Forum.class);
@@ -63,6 +63,18 @@ public class ApplicationContextConfig {
 
 		return sessionBuilder.buildSessionFactory();
 	}
+	
+	private Properties getHibernateProperties() {
+		Properties properties = new Properties();
+		properties.put("hibernate.dialect", "org.hibernate.dialect.Oracle10gDialect");
+		properties.put("hibernate.show_sql", "true");
+		properties.put("hibernate.format_sql", "true");
+		properties.put("hibernate.hbm2ddl.auto", "update");
+		properties.put("hibernate.lazy", "false");
+		return properties;
+	}
+
+
 
 	@Autowired
 	@Bean(name = "transactionManager")
